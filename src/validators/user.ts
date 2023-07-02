@@ -4,6 +4,9 @@ export const postedDataValidator = (data: any) => {
 
     let isDefined = true;
 
+    if(actualKeys.length !== keys.length)
+        isDefined = false;
+
     keys.map(key => {
         if (!actualKeys.includes(key))
             isDefined = false;
